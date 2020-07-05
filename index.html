@@ -163,20 +163,241 @@
                         <img src="img/logo.png" class="img-fluid" alt="logo" />
                     </div>
                     <div class="col-12 col-sm align-self-center">
-                        <a
-                            href="#nGuests"
-                            class="btn btn-block nav-link btn-warning"
-                            data-toggle="tooltip"
-                            data-html="true"
-                            title="Or Call us at <br><strong>+852 123456879</strong>"
-                            data-placement="bottom"
-                        >
-                            Reserve Table
+                        <a data-toggle="modal" data-target="#reserveModal">
+                            <button
+                                type="button"
+                                class="btn btn-warning btn-lg btn-block text-white"
+                            >
+                                Reserve Table
+                            </button>
                         </a>
                     </div>
                 </div>
             </div>
         </header>
+        <div id="reserveModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header bg-warning text-white">
+                        <h3>Reserve Table</h3>
+
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                        >
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div
+                            id="reserveTable"
+                            class="row row-container mb-5 d-flex justify-content-sm-center"
+                        >
+                            <div class="col-12 col-sm-8">
+                                <form class="col-12 col-sm">
+                                    <div
+                                        class="form-row align-items-center mb-2"
+                                    >
+                                        <div class="col-12 col-sm-2">
+                                            <label class="col-form-label"
+                                                >Number of guest</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-group form-check form-check-inline"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                id="option1"
+                                                type="radio"
+                                                value="option1"
+                                            />
+                                            <label
+                                                class="col-form-label"
+                                                for="option1"
+                                                >1</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-group form-check-inline"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                id="option2"
+                                                type="radio"
+                                                value="option2"
+                                            />
+                                            <label
+                                                class="col-form-label"
+                                                for="option2"
+                                                >2</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-group form-check-inline"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                id="option3"
+                                                type="radio"
+                                                value="option3"
+                                            />
+                                            <label
+                                                class="col-form-label"
+                                                for="option3"
+                                                >3</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-group form-check-inline"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                id="option4"
+                                                type="radio"
+                                                value="option4"
+                                            />
+                                            <label
+                                                class="col-form-label"
+                                                for="option4"
+                                                >4</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-group form-check-inline"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                id="option5"
+                                                type="radio"
+                                                value="option5"
+                                            />
+                                            <label
+                                                class="col-form-label"
+                                                for="option5"
+                                                >5</label
+                                            >
+                                        </div>
+                                        <div
+                                            class="form-group form-check-inline"
+                                        >
+                                            <input
+                                                class="form-check-input"
+                                                id="option6"
+                                                type="radio"
+                                                value="option6"
+                                            />
+                                            <label
+                                                class="col-form-label"
+                                                for="option6"
+                                                >6</label
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div
+                                            class="form-group row align-items-center"
+                                        >
+                                            <div class="col-12 col-sm-2">
+                                                <label
+                                                    class="col-form-label"
+                                                    for="smokingArea"
+                                                    >Section
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-sm">
+                                                <div
+                                                    class="btn-group btn-group-toggle"
+                                                    data-toggle="buttons"
+                                                >
+                                                    <label
+                                                        class="btn btn-success active"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            name="options"
+                                                            id="option1"
+                                                            autocomplete="off"
+                                                            checked
+                                                        />
+                                                        Non-smoking
+                                                    </label>
+                                                    <label
+                                                        class="btn btn-danger"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            name="options"
+                                                            id="option2"
+                                                            autocomplete="off"
+                                                        />
+                                                        Smoking
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div
+                                            class="form-group row align-items-center"
+                                        >
+                                            <div class="col-12 col-sm-2">
+                                                <label
+                                                    class="col-form-label"
+                                                    for="researvationDate"
+                                                    >Date &amp; Time</label
+                                                >
+                                            </div>
+                                            <div class="col-12 col-sm-5">
+                                                <input
+                                                    type="date"
+                                                    class="form-control"
+                                                    id="reservationDate"
+                                                    name="reservationDate"
+                                                    placeholder="Date"
+                                                />
+                                            </div>
+                                            <div class="col-12 col-sm-3">
+                                                <input
+                                                    type="time"
+                                                    class="form-control"
+                                                    id="reservationTime"
+                                                    name="reservationTime"
+                                                    placeholder="Time"
+                                                    min="9:00"
+                                                    max="23:00"
+                                                />
+                                            </div>
+                                            <small
+                                                class="col-12 col-sm-8 offset-sm-2"
+                                                >Close on Monday. Kitchen hours:
+                                                9am to 23pm</small
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div
+                                            class="col-12 col-sm form-group offset-md-2"
+                                        >
+                                            <button class="btn btn-primary">
+                                                Reserve
+                                            </button>
+                                            <button
+                                                class="btn btn-secondary"
+                                                data-dismiss="modal"
+                                            >
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="container">
             <div class="row row-content">
@@ -374,156 +595,6 @@
                     </div>
                 </div>
             </div>
-            <div
-                id="reserveTable"
-                class="row row-container mb-5 d-flex justify-content-sm-center"
-            >
-                <div class="col-12 col-sm-8">
-                    <div class="card">
-                        <h2 class="card-header bg-warning text-white">
-                            Reserve Table
-                        </h2>
-                        <div class="card-body">
-                            <form class="col-12 col-sm">
-                                <div class="form-row align-items-center mb-2">
-                                    <div class="col-12 col-sm-2">
-                                        <label class="col-form-label"
-                                            >Number of guest</label
-                                        >
-                                    </div>
-                                    <div
-                                        class="form-group form-check form-check-inline"
-                                    >
-                                        <input
-                                            class="form-check-input"
-                                            id="option1"
-                                            type="radio"
-                                            value="option1"
-                                        />
-                                        <label
-                                            class="col-form-label"
-                                            for="option1"
-                                            >1</label
-                                        >
-                                    </div>
-                                    <div class="form-group form-check-inline">
-                                        <input
-                                            class="form-check-input"
-                                            id="option2"
-                                            type="radio"
-                                            value="option2"
-                                        />
-                                        <label
-                                            class="col-form-label"
-                                            for="option2"
-                                            >2</label
-                                        >
-                                    </div>
-                                    <div class="form-group form-check-inline">
-                                        <input
-                                            class="form-check-input"
-                                            id="option3"
-                                            type="radio"
-                                            value="option3"
-                                        />
-                                        <label
-                                            class="col-form-label"
-                                            for="option3"
-                                            >3</label
-                                        >
-                                    </div>
-                                    <div class="form-group form-check-inline">
-                                        <input
-                                            class="form-check-input"
-                                            id="option4"
-                                            type="radio"
-                                            value="option4"
-                                        />
-                                        <label
-                                            class="col-form-label"
-                                            for="option4"
-                                            >4</label
-                                        >
-                                    </div>
-                                    <div class="form-group form-check-inline">
-                                        <input
-                                            class="form-check-input"
-                                            id="option5"
-                                            type="radio"
-                                            value="option5"
-                                        />
-                                        <label
-                                            class="col-form-label"
-                                            for="option5"
-                                            >5</label
-                                        >
-                                    </div>
-                                    <div class="form-group form-check-inline">
-                                        <input
-                                            class="form-check-input"
-                                            id="option6"
-                                            type="radio"
-                                            value="option6"
-                                        />
-                                        <label
-                                            class="col-form-label"
-                                            for="option6"
-                                            >6</label
-                                        >
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div
-                                        class="form-group row align-items-center"
-                                    >
-                                        <div class="col-12 col-sm-2">
-                                            <label
-                                                class="col-form-label"
-                                                for="researvationDate"
-                                                >Date &amp; Time</label
-                                            >
-                                        </div>
-                                        <div class="col-12 col-sm-5">
-                                            <input
-                                                type="date"
-                                                class="form-control"
-                                                id="reservationDate"
-                                                name="reservationDate"
-                                                placeholder="Date"
-                                            />
-                                        </div>
-                                        <div class="col-12 col-sm-3">
-                                            <input
-                                                type="time"
-                                                class="form-control"
-                                                id="reservationTime"
-                                                name="reservationTime"
-                                                placeholder="Time"
-                                                min="9:00"
-                                                max="23:00"
-                                            />
-                                        </div>
-                                        <small
-                                            class="col-12 col-sm-8 offset-sm-2"
-                                            >Close on Monday. Kitchen hours: 9am
-                                            to 23pm</small
-                                        >
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div
-                                        class="col-12 col-sm-3 form-group offset-md-2"
-                                    >
-                                        <button class="btn btn-primary">
-                                            Reserve
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <footer class="footer">
@@ -596,10 +667,5 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-        </script>
     </body>
 </html>
