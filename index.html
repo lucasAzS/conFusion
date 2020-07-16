@@ -65,7 +65,7 @@
                         </li>
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <a id="loginButton">
                             <span class="fa fa-sign-in"></span> Login
                         </a>
                     </span>
@@ -76,7 +76,7 @@
         <div id="loginModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header text-white">
                         <h4 class="modal-title">Login</h4>
                         <button
                             type="button"
@@ -163,7 +163,7 @@
                         <img src="img/logo.png" class="img-fluid" alt="logo" />
                     </div>
                     <div class="col-12 col-sm align-self-center">
-                        <a data-toggle="modal" data-target="#reserveModal">
+                        <a id="reserveButton">
                             <button
                                 type="button"
                                 class="btn btn-warning btn-lg btn-block text-white"
@@ -178,8 +178,8 @@
         <div id="reserveModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
-                    <div class="modal-header bg-warning text-white">
-                        <h3>Reserve Table</h3>
+                    <div class="modal-header text-white">
+                        <h3>Reserve a Table</h3>
 
                         <button
                             type="button"
@@ -345,7 +345,7 @@
                                             <div class="col-12 col-sm-2">
                                                 <label
                                                     class="col-form-label"
-                                                    for="researvationDate"
+                                                    for="reservationDate"
                                                     >Date &amp; Time</label
                                                 >
                                             </div>
@@ -703,6 +703,12 @@
                             .children("span")
                             .addClass("fa-pause");
                     }
+                });
+                $("#loginButton").click(function () {
+                    $("#loginModal").modal("toggle");
+                });
+                $("#reserveButton").click(function () {
+                    $("#reserveModal").modal("toggle");
                 });
             });
         </script>
